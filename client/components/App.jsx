@@ -1,8 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const App = () => {
+import Home from './Home'
+import Register from './Register'
+import SignIn from './SignIn'
+
+import { Route } from 'react-router-dom'
+
+function App () {
   return (
-    <h1>React development has begun!</h1>
+    <>
+    
+    <Route exact path='/' component={Home} />
+    <Route exact path='/register' component={Register} />
+    <Route exact path='/signin' component={SignIn} />
+    </>
+    
   )
 }
 
