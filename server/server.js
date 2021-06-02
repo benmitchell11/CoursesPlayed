@@ -9,7 +9,6 @@ const server = express()
 
 server.use(express.static(path.join(__dirname, 'public')))
 
-server.use('/api/v1', authRoutes)
 server.use('/api/v1/coursesPlayed', coursesPlayedRoutes)
 
 module.exports = server

@@ -1,0 +1,191 @@
+// Google Font equivalent of DIN
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
+
+// Update Bulma font-family
+$family-sans-serif: 'Barlow', sans-serif;
+
+body {
+  font-family: $family-sans-serif;
+  font-weight: $weight-normal;
+  font-size: $size-4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $weight-bold;
+}
+
+a {
+  color: rgb(255, 108, 23);
+  text-align: center;
+  display: grid;
+}
+
+a:hover {
+  color: rgb(253, 137, 69);
+}
+
+.fa {
+  // padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0px 5px;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  // background: #3B5998;
+  color: white;
+}
+.fa-twitter {
+  // background: #55ACEE;
+  color:  white;
+}
+.fa-google {
+  // background: #DD4B39;
+  color: white;
+}
+.fa-github {
+  // background: #DD4B39;
+  color: white;
+}
+
+.landingLogo h1, h2, h3, h4, h5, h6 {
+  font-weight: $weight-bold;
+  font-size: 40px;
+  color: white;
+}
+
+.landing-text p {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+.formLogo h1, h2, h3, h4, h5, h6 {
+  font-weight: $weight-bold;
+  font-size: 40px;
+  color: rgb(255, 108, 23);
+}
+
+.browseBtn {
+  font-weight: $weight-bold;
+  font-size: 1.2rem;
+
+}
+
+.primaryBtn {
+  font-weight: $weight-bold;
+  font-size: 1.2rem;
+}
+
+// .alingSearchBar .primaryBtn:focus {
+//   font-weight: $weight-bold;
+//   font-size: 0.8rem;
+// }
+
+.alingSearchBar .primaryBtn {
+  font-weight: $weight-bold;
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.alingSearchBar .primaryBtn:hover {
+  font-weight: $weight-bold;
+  font-size: 0.8rem;
+}
+
+
+.navLinks a {
+  color: white;
+  margin-top: 0px;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 22px 16px;
+  text-decoration: none;
+}
+
+.navLinks a:hover {
+  color: rgb(255, 108, 23);
+  font-size: 1.2rem;
+  background-color: white;
+}
+
+.navLinks .highlight {
+  color: rgb(255, 108, 23);
+  
+}
+
+.form h1{
+  color: rgb(255, 108, 23);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.itemForm h1{
+  color: rgb(255, 108, 23);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.itemDetails h1{
+  color: rgb(255, 108, 23);
+  font-size: 2rem;
+  text-align: center;
+}
+
+p {
+  color: white
+}
+
+.itemDisplay p {
+  color: rgb(63, 62, 62);
+}
+
+.itemDisplay h1 {
+  color: rgb(255, 108, 23);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.title a {
+  font-size: $size-1;
+  color: $green;
+  
+  span {
+    color: $yellow;
+  }
+}
+
+.product-bottom-details p {
+  color: rgb(153, 152, 152);
+}
+
+.product-bottom-details p:hover {
+  color: rgb(255, 108, 23);
+}
+
+.itemInfo{
+  color: rgb(63, 62, 62);
+}
+
+.word-wrap {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+// Footer Styles
+footer p {
+  font-size: $size-5;
+
+  color: white;
+}

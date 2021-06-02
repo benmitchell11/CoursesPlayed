@@ -1,0 +1,38 @@
+.box {
+    box-shadow: none;
+    border: 3px solid $border;
+    border-radius: 0;
+  }
+  
+  .clearfix {
+    clear: both;
+  }
+  
+  .imageGridContainer{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    list-style: none;
+  }
+  
+  .imageGridItem{
+    align-items: center;
+    flex: 1 0 25%;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0.5rem;
+  
+    img {
+      height: 200px;
+    }
+  }
+  
+  .container-footer {
+    min-height: 100vh;
+    padding-bottom: 100px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+  }
+  
+  

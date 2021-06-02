@@ -2,6 +2,14 @@ import request from 'superagent'
 
 const rootUrl = '/api/v1'
 
+export function getCourses () {
+  return request.get(rootUrl + '/coursesPlayed')
+    .then((res) => {
+      console.log(res)
+      return res.body
+    })
+}
+
 function errorHandler (method, route) {
     return (err) => {
       if (err.message === 'Not Found') {

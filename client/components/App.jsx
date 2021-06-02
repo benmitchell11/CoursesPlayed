@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Route } from 'react-router-dom'
+
 
 import Home from './Home'
 import Register from './Register'
 import SignIn from './SignIn'
 
-import { Route } from 'react-router-dom'
 
 function App () {
   return (

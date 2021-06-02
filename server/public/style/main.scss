@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+@import "../../../node_modules/bulma/bulma.sass";
+
+// Custom CSS - Bulma Overrides
+
+// Modules - mostly contains variables, mixins and functions.
+@import "modules/colors";
+
+// Partials - components like buttons, header, footer, typography
+@import "partials/typography";
+
+@import "partials/layout";
+
+.globalBackground {
+  background-color: rgb(3, 80, 13);
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.navLinks{
+  display: flex;
+  align-items: right;
+  margin-left: auto;
+  margin-right: 2%;
+}
+
+.alingElementNav{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: rgb(22, 199, 81);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.nav-logo{
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  margin-bottom: 0.4rem;
+  width: 90px;
+  height: auto;
+ }
+
+ .alingSearchBar {
+  display: flex;
+  align-items: left;
+  margin-left: 3%;
+  width: 35%;
+}
