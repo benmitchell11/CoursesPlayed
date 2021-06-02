@@ -1,10 +1,10 @@
 {
-  "name": "boilerplate-react-webpack",
+  "name": "courses-played",
   "version": "0.2.2",
-  "description": "A webpack React starter",
-  "repository": "https://github.com/dev-academy-challenges/boilerplate-react-webpack.git",
+  "description": "Courses Played",
+  "repository": "https://github.com/benmitchell11/CoursesPlayed.git",
   "main": "server/index.js",
-  "author": "EDA",
+  "author": "benmitce11",
   "license": "ISC",
   "scripts": {
     "dev": "run-p dev:client dev:server",
