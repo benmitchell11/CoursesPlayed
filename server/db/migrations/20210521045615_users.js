@@ -5,7 +5,7 @@ exports.up = (knex) => {
                 table.increments('id').primary()
                 table.string('username')
                 table.string('email')
-                table.binary('profilepic')
+                table.binary('profilePic')
                 table.string('country')
                 table.string('region')
                 table.string('handicap')

@@ -2,6 +2,8 @@ const express = require('express')
 
 const courses = require('../courses')
 
+const users = require('../users')
+
 
 
 const router = express.Router()
@@ -20,7 +22,16 @@ const utils = require('../db/utils')
     })
 })
  
-
+router.get('/userprofile/:id', (req, res) => {
+  const id = Number(req.params.id)
+  users.getUserById(id)
+    .then((singleUser) => {
+      return res.json(singleUser)
+    })
+    .catch((err) => {
+      res.status(500).json({ error: err.message })
+    })
+})
 
 
  

@@ -11,3 +11,6 @@ function getCourses () {
     .select('id', 'name', 'country', 'region', 'photo')
 }
 
+function getCoursesByRegion () {
+    
+}

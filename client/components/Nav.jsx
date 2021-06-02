@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 import SearchBar from './SearchBar'
+import UserDropDown from './UserDropDown'
 
 
 function Nav() {
@@ -24,6 +25,9 @@ function Nav() {
     <Link className="button primaryBtn" to='/signin'>Sign In</Link>
 
     </div>
+
+
+    <UserDropDown />
         </div>
 
         

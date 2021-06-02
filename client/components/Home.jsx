@@ -7,23 +7,24 @@ import Nav from './Nav'
 
 const Home = () => {
     return (
-        <>
+        
 
-        <Nav />
+       
                 
     <div className='globalBackground'>
+
+    <Nav />
       
 
        
 
-    <div className='Title'>    
-        
+    <Link className="button primaryBtn" to='/landing'>Landing</Link>
+    <Link className="button primaryBtn" to='/courses'>courses</Link>
+
+
+
+    </div>
     
-    </div>
-
-
-    </div>
-    </>
     
     )
 
