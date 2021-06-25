@@ -6,11 +6,11 @@ import EditPopup from './EditPopup'
 
 export default function UserProfile (props) {
 
-    const [isOpen, setIsOpen] = useState(false)
+    
 
-    const togglePopup = () => {
-        setIsOpen(!isOpen)
-    }
+  
+
+    
 
     const [user, setUser] = useState({
         user: []
@@ -26,20 +26,29 @@ export default function UserProfile (props) {
             })
     }, [])
 
+    console.log(props)
+
     return (
         <div className='globalBackground'>
             <Nav />
             <div className='UserInfoForm'>
+                <div className='profile-heading' >
                 <h1>General User Information</h1>
+                </div>
+                <div className='profile-Pic' >
+                    <div className='profile-pic-heading'>
                 <h2>Profile Picture</h2>
-                <img src={user.profilePic} style={{ width: '300px', height: '300px' }}
+                </div>
+                <div className='profile-pic-display'>
+                <img src={user.profilePic} style={{ width: '150px', height: '150px' }}
                 alt=''
               />
+              </div>
+              </div>
               <div className='UsernameEdit'>
               <h2>Username</h2>
               <p>{user.username}</p>
-              <input type='button' value='Edit' onClick={togglePopup} />
-              {isOpen && <EditPopup
+              <EditPopup
                 content={<>
                 <b>Edit Your Username</b>
                 <div className='userNameEditInput'>
@@ -47,14 +56,12 @@ export default function UserProfile (props) {
                  </div>
                     <button>Save Changes</button>
                     </>}
-                        handleClose={togglePopup}
-                        />}
+                        />
               <div />
               <div className='EmailEdit'>
               <h2>Email</h2>
               <p>{user.email}</p>
-              <input type='button' value='Edit' onClick={togglePopup} />
-              {isOpen && <EditPopup
+              <EditPopup
                 content={<>
                 <b>Edit Your Email</b>
                 <div className='emailEditInput'>
@@ -62,14 +69,12 @@ export default function UserProfile (props) {
                  </div>
                     <button>Save Changes</button>
                     </>}
-                        handleClose={togglePopup}
-                        />}
+                        />
               </div>
               <div className='CountryEdit'>
               <h2>Country</h2>
               <p>{user.country}</p>
-              <input type='button' value='Edit' onClick={togglePopup} />
-              {isOpen && <EditPopup
+                <EditPopup
                 content={<>
                 <b>Edit Your Country</b>
                 <div className='countryEditInput'>
@@ -77,29 +82,26 @@ export default function UserProfile (props) {
                  </div>
                     <button>Save Changes</button>
                     </>}
-                        handleClose={togglePopup}
-                        />}
+                        />
               </div>
               <div className='RegionEdit'>
               <h2>Region</h2>
               <p>{user.region}</p>
-              <input type='button' value='Edit' onClick={togglePopup} />
-              {isOpen && <EditPopup
+                <EditPopup
                 content={<>
                 <b>Edit Your Region</b>
                 <div className='regionEditInput'>
-                 <input className='regionEdit' placeholder={user.email} />
+                 <input className='regionEdit' placeholder={user.region} />
                  </div>
                     <button>Save Changes</button>
                     </>}
-                        handleClose={togglePopup}
-                        />}
+                        
+                        />
               </div>
               <div className='HandicapEdit'>
               <h2>Handicap</h2>
               <p>{user.handicap}</p>
-              <input type='button' value='Edit' onClick={togglePopup} />
-              {isOpen && <EditPopup
+                <EditPopup
                 content={<>
                 <b>Edit Your Handicap</b>
                 <div className='handicapEditInput'>
@@ -107,8 +109,7 @@ export default function UserProfile (props) {
                  </div>
                     <button>Save Changes</button>
                     </>}
-                        handleClose={togglePopup}
-                        />}
+                        />
               </div>
               </div>
             </div>

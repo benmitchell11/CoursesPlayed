@@ -1,3 +1,4 @@
+
 exports.up = (knex) => {
     knex.schema.hasTable('courses').then(function(exists) {
         if (!exists) {
@@ -6,6 +7,7 @@ exports.up = (knex) => {
                 table.string('name')
                 table.string('country')
                 table.string('region')
+                table.integer('region_id')
                 table.binary('photo')
                })
 

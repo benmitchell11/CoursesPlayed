@@ -26,6 +26,34 @@
   height:auto;
   top: 0;
   left: 0;
+  position:static;
+  
+}
+
+.globalBackground {
+  background-color: rgb(37, 36, 36);
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100;
+  height:auto;
+  top: 0;
+  left: 0;
+  position:static;
+  
+}
+
+.viewBox {
+  width:1000px;
+  height:auto;
+  background-color: rgb(37, 36, 36);
+  display: block;
+  margin: auto;
+  border-style:solid;
+  border-color: rgb(138, 137, 137);
+  border-width: thin;
+  
+  
   
 }
 
@@ -70,6 +98,11 @@
   width: 50px;
   height: auto;
   border-radius: 50%;
+  
+ }
+
+ .userDropDown img :hover{
+   opacity: 0.5;
  }
 
  .landing-background{
@@ -138,25 +171,102 @@
   font-size: 20px;
 }
 
-.north-island{
+.new-zealand-map{
   margin-bottom: 5%;
   margin-top: 5%;
   display: grid;
   justify-content: center;
   text-align: center;
-  height: 300px;
+  height: 1200px;
   width: auto;
+  position: absolute;
 }
 
-.south-island{
+.canterbury{
   margin-bottom: 5%;
-  margin-top: 2%;
+  margin-top: 5%;
   display: grid;
   justify-content: center;
   text-align: center;
-  height: 300px;
+  height: 1200px;
   width: auto;
+  position: absolute;
+  opacity: 1.0;
+  
 }
+
+.canterbury:hover {
+  opacity: 0.5;
+}
+
+.wellington{
+  margin-bottom: 5%;
+  margin-top: 5%;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  height: 1200px;
+  width: auto;
+  position: absolute;
+  opacity: 1.0;
+  
+}
+
+.wellington:hover{
+  opacity: 0.5;
+}
+
+svg path{
+  fill: #7c7c7c;
+  opacity: 1.0;
+}
+
+svg path:hover{
+  opacity: 0.5;
+
+}
+
+svg path .canterbury{
+  fill: #7c7c7c;
+  opacity: 1.0;
+}
+
+svg rect{
+  color: red;
+  background-image: url('../img/pin.jpg');
+}
+
+
+
+
+.cole {
+  text-align: center;
+  justify-content: center;
+}
+
+
+.tooltip{
+  position: relative;
+  display:inline-block;
+  
+}
+
+.Region-Header{
+  text-align: center;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position:absolute;
+  z-index: 1;
+}
+
 
 .UserInfoForm{
   background-color: rgb(85, 85, 85);
@@ -167,5 +277,6 @@
   margin: 5% 10%;
   border-radius: 25px;
   max-width: 90rem;
+  text-align: left;
   // max-height: 80vh;
 }

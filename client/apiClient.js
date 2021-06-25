@@ -26,6 +26,45 @@ export function getUser (userID) {
     })
 }
 
+export function getCoursesByRegion (region) {
+  return request.get(rootUrl + '/coursesplayed/regioncourses/' + region)
+  .then((res) => {
+    return res.body
+  })
+}
+
+export function getRegions () {
+  return request.get(rootUrl + '/coursesplayed')
+  .then((res) => {
+    console.log(res)
+    return res.body
+  })
+}
+
+export function getRegion (regionID) {
+  return request.get(rootUrl + '/coursesplayed/regioncourses/' + regionID)
+    .then((res) => {
+      console.log(res)
+      return res.body
+    })
+}
+
+export function getRegionByName (regionName) {
+  return request.get(rootUrl + '/coursesplayed/regioncourses/' + regionName)
+  .then((res) => {
+    console.log(res)
+    return res.body
+  })
+}
+
+export function getCoursesByRegionID (region_id) {
+  return request.get(rootUrl + '/coursesplayed/courses/' + region_id)
+  .then((res) => {
+    console.log(res)
+    return res.body
+  })
+}
+
 function errorHandler (method, route) {
     return (err) => {
       if (err.message === 'Not Found') {

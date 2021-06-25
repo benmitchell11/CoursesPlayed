@@ -13,13 +13,16 @@ const Home = () => {
                 
     <div className='globalBackground'>
 
-    <Nav />
-      
 
+
+    <Nav />
+    
+      
+    
        
 
     <Link className="button primaryBtn" to='/landing'>Landing</Link>
-    <Link className="button primaryBtn" to='/courses'>courses</Link>
+    <Link className="button primaryBtn" to='/region'>courses</Link>
 
 
 

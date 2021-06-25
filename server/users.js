@@ -5,9 +5,15 @@ module.exports = {
     createUser,
     userExists,
     getUserByName,
-    getUserById
+    getUserById,
+    getUsers
   }
   
+  function getUsers (db = connection) {
+    return db('users')
+    .select('id', 'username', 'email', 'profilePic', 'country', 'region', 'handicap', 'hash', 'isAdmin' )
+  }
+
   function createUser (user, db = connection) {
     return userExists(user.username, db)
       .then((exists) => {
