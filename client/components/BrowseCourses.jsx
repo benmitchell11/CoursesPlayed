@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react'
-import { getCoursesByRegionID } from '../apiClient'
+import { getCourses} from '../apiClient'
 import Course from './Course'
 
 
-export default function BrowseCourses(props) {
+export default function BrowseCourses() {
     const [courses, setCourses] = useState({
         courses: []
     })
 
    useEffect(() =>{
-        getCoursesByRegionID(props.match.params.region_id)
+        getCourses()
         .then((res) => {
             setCourses(res)
         })
@@ -17,6 +17,8 @@ export default function BrowseCourses(props) {
             console.log('error', error.message)
         })
     }, [])
+
+    
 
     console.log(courses)
 

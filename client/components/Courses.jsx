@@ -8,6 +8,10 @@ import BrowseRegions from './BrowseRegions'
 
 function Courses() {
 
+    const result = 4/40*100
+    
+    console.log(result)
+
     return (
         <div className='globalBackground'>
             <Nav />

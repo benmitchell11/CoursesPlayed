@@ -11,24 +11,13 @@
 @import "partials/typography";
 
 @import "partials/layout";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 
 
  
 
 
 
-.globalBackground {
-  background-color: rgb(37, 36, 36);
-  background-size: cover;
-  min-width: 100%;
-  min-height: 100%;
-  width: 100;
-  height:auto;
-  top: 0;
-  left: 0;
-  position:static;
-  
-}
 
 .globalBackground {
   background-color: rgb(37, 36, 36);
@@ -68,12 +57,11 @@
   display: flex;
   width: 100%;
   align-items: center;
-  background-color: rgb(85, 85, 85);
-  border-style:solid;
-  border-color: rgb(138, 137, 137);
-  border-width: thin;
+  background-color: grey;
   padding-top: 0;
   padding-bottom: 0;
+  opacity: 0.5;
+
 }
 
 .nav-logo{
@@ -234,6 +222,7 @@ svg path .canterbury{
 svg rect{
   color: red;
   background-image: url('../img/pin.jpg');
+  
 }
 
 
@@ -279,4 +268,234 @@ svg rect{
   max-width: 90rem;
   text-align: left;
   // max-height: 80vh;
+}
+
+.cf4a {
+  position:relative;
+  height: 969px;
+  width: 1932;
+  margin:0 auto;
+  overflow: hidden;
+
+}
+
+.cf4a img {
+  -webkit-animation-name: cf4FadeInOut;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 15s;
+  -moz-animation-name: cf4FadeInOut;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-duration: 15s;
+  -o-animation-name: cf4FadeInOut;
+  -o-animation-timing-function: ease-in-out;
+  -o-animation-iteration-count: infinite;
+  -o-animation-duration: 15s;
+  animation-name: cf4FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 100s;
+}
+
+.cf4a img {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes cf4FadeInOut {
+  0% {
+    opacity:1;
+  }
+  6% {
+    opacity:1;
+  }
+  7% {
+    opacity:0;
+  }
+  85% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.cf4a img:nth-of-type(1) {
+  animation-delay: 156s;
+}
+.cf4a img:nth-of-type(2) {
+  animation-delay: 142s;
+}
+.cf4a img:nth-of-type(3) {
+  animation-delay: 120s;
+}
+.cf4a img:nth-of-type(4) {
+  animation-delay: 108s;
+}
+.cf4a img:nth-of-type(5) {
+  animation-delay: 96s;
+}
+.cf4a img:nth-of-type(6) {
+  animation-delay: 84s;
+}
+.cf4a img:nth-of-type(7) {
+  animation-delay: 72s;
+}
+.cf4a img:nth-of-type(8) {
+  animation-delay: 60s;
+}
+.cf4a img:nth-of-type(9) {
+  animation-delay: 48s;
+}
+.cf4a img:nth-of-type(10) {
+  animation-delay: 36s;
+}
+.cf4a img:nth-of-type(11) {
+  animation-delay: 24s;
+}
+.cf4a img:nth-of-type(12) {
+  animation-delay: 12s;
+}
+.cf4a img:nth-of-type(13) {
+  animation-delay: 0;
+}
+
+.testNav {
+  width: 100%;
+  padding: 20px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  transition: .5s;
+  z-index: 9;
+  text-align: center;
+  
+ 
+  
+}
+
+.testNav .box {
+  display: flex;
+  opacity: 0.5;
+  width: 100%;
+  height: 100px;
+  margin-left: 0;
+  margin-top: 0;
+  float: left;
+  color: #7c7c7c;
+  z-index: 9;
+  position: relative;
+}
+
+
+
+.testLogo {
+  width: 300px;
+  height: auto;
+ justify-content: center;
+ z-index: 99;
+}
+
+.courses-button {
+  width: 100px;
+  height:auto;
+  position: relative; 
+  display: inline;
+  float: left;
+}
+
+.courses-button .bottom {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.courses-button:hover .bottom {
+  display: inline;
+}
+
+.signin-button {
+  width: 100px;
+  height:auto;
+  position: relative; 
+  display: inline;
+  float: left;
+}
+
+.signin-button .bottom {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.signin-button:hover .bottom {
+  display: inline;
+}
+
+.register-button {
+  width: 100px;
+  height:auto;
+  position: relative; 
+  display: inline;
+  float: left;
+}
+
+.register-button .bottom {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.register-button:hover .bottom {
+  display: inline;
+}
+
+.profile-button {
+  width: 100px;
+  height:auto;
+  position: relative; 
+  display: inline;
+  float: left;
+}
+
+.profile-button .bottom {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.profile-button:hover .bottom {
+  display: inline;
+}
+
+ .homeText {
+  text-align: center;
+  width: 400px;
+  height: auto;
+  top: 50%;
+  left: 40%;
+  transform: translate(0, -50%);
+  position: absolute;
+  background: transparent;
+  border: white;
+  border-style: solid;
+  z-index: 99;
+  margin: -35px 0 0 --35px;
+  padding: 10px;
+
+}
+
+.homeText h1 {
+  color: white;
 }

@@ -33,6 +33,7 @@ export default function Map () {
     }
 
     const onWheel = (e) => {
+        
         if (e.deltaY) {
             const sign = Math.sign(e.deltaY) / 10
             const scale = 1 - sign
@@ -48,10 +49,35 @@ export default function Map () {
                 
             })
 
+           
+
+            
+
             
             
         }
     }
+
+    const enableScroll = () => {
+        window.removeEventListener('wheel', preventDefault, false)
+    }
+
+    const disableScroll = () => {
+        window.addEventListener('wheel', preventDefault, {
+            passive: false
+        })
+    }
+
+    function preventDefault(e) {
+        e = e || window.event
+        if (e.preventDefault) {
+          e.preventDefault()
+        }
+        e.returnValue = false
+      }
+        
+
+        
 
     useEffect(() => {
         const mouseup = () => {
@@ -72,10 +98,13 @@ export default function Map () {
 
         window.addEventListener('mouseup', mouseup)
         window.addEventListener('mousemove', mousemove)
+       
 
         return () => {
             window.removeEventListener('mouseup', mouseup)
             window.removeEventListener('mousemove', mousemove)
+            
+             
         }
     })
 
@@ -93,9 +122,13 @@ export default function Map () {
       ref={containerRef}
       onMouseDown={onMouseDown}
       onWheel={onWheel}
+      
     >
         
-        <svg baseProfile="tiny" fill="#7c7c7c" height="1982" stroke="#ffffff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" version="1.2" viewBox="0 0 1000 1982" width="1000" xmlns="http://www.w3.org/2000/svg" onLoad={onLoad}>
+        <svg baseProfile="tiny" fill="#7c7c7c" height="1982" stroke="#ffffff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" version="1.2" viewBox="0 0 1000 1982" width="1000" xmlns="http://www.w3.org/2000/svg" onLoad={onLoad}
+        onMouseEnter={disableScroll}
+        onMouseLeave={enableScroll}
+      >
             
             
  <g className='regions' style={{

@@ -7,7 +7,7 @@ exports.up = (knex) => {
                 table.string('name')
                 table.string('country')
                 table.string('region')
-                table.integer('region_id')
+                table.integer('regionNumber')
                 table.binary('photo')
                })
 

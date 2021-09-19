@@ -10,6 +10,14 @@ export function getCourses () {
     })
 }
 
+export function getCourse (courseID) {
+  return request.get(rootUrl + '/coursesplayed/testingregion/' + courseID)
+  .then((res) => {
+    console.log(res)
+    return res.body
+  })
+}
+
 export function getUsers () {
   return request.get(rootUrl + '/coursesPlayed')
     .then((res) => {
@@ -26,8 +34,8 @@ export function getUser (userID) {
     })
 }
 
-export function getCoursesByRegion (region) {
-  return request.get(rootUrl + '/coursesplayed/regioncourses/' + region)
+export function getCoursesByRegionNumber (regionNumber) {
+  return request.get(rootUrl + '/coursesplayed/regioncourses/' + regionNumber)
   .then((res) => {
     return res.body
   })
@@ -42,28 +50,30 @@ export function getRegions () {
 }
 
 export function getRegion (regionID) {
-  return request.get(rootUrl + '/coursesplayed/regioncourses/' + regionID)
+  return request.get(rootUrl + '/coursesplayed/testingregion/' + regionID)
     .then((res) => {
       console.log(res)
       return res.body
     })
 }
 
-export function getRegionByName (regionName) {
-  return request.get(rootUrl + '/coursesplayed/regioncourses/' + regionName)
+export function getRegionByName (name) {
+  return request.get(rootUrl + '/coursesplayed/regioncourses/' + name)
   .then((res) => {
     console.log(res)
     return res.body
   })
 }
 
-export function getCoursesByRegionID (region_id) {
-  return request.get(rootUrl + '/coursesplayed/courses/' + region_id)
+export function getCoursesByRegionID (regionNumber) {
+  return request.get(rootUrl + '/coursesplayed/regioncourses/' + regionNumber)
   .then((res) => {
     console.log(res)
     return res.body
   })
 }
+
+
 
 function errorHandler (method, route) {
     return (err) => {

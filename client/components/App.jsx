@@ -14,6 +14,9 @@ import Courses from './Courses'
 import ByRegion from './ByRegion'
 import BrowseRegions from './BrowseRegions'
 import RegionCourses from './RegionCourses'
+import CoursesByRegion from './CoursesByRegion'
+import RegionName from './RegionName'
+import TestingRegion from './TestingRegion'
 
 
 function App () {
@@ -26,11 +29,15 @@ function App () {
     <Route exact path='/landing' component={LandingPage} />
     <Route exact path='/userprofile/:id' component={UserProfile} />
     <Route exact path='/region' component={Region} />
-    <Route exact path='/test/:id' component={TestingPage} />
-    <Route exact path='/courses/region_id' component={Courses} />
-    <Route exact path='/regioncourses/:id' component={ByRegion} />
+    <Route exact path='/test' component={TestingPage} />
+    <Route exact path='/courses' component={Courses} />
+    {/* <Route exact path='/regioncourses/:id' component={ByRegion} /> */}
     <Route exact path='/browseregions' component={BrowseRegions} />
     <Route exact path='/coursestest/region_id' component={RegionCourses} />
+    <Route path='/regioncourses/:id' component={CoursesByRegion} />
+    {/* <Route exact path='/regioncourses/:name' component={RegionName} /> */}
+    <Route exact path='/testingregion/:regionNumber' component={TestingRegion} />
+    <Route path='/testingregion/:id' component={TestingRegion} />
     
     </>
     

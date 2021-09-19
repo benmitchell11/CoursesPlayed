@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react'
-import { getRegion } from '../apiClient'
+import { getRegionByName, getCoursesByRegion, getCoursesByRegionID } from '../apiClient'
+import BrowseCourses from './BrowseCourses'
 import Nav from './Nav'
 
-export default function ByRegion (props) {
+export default function RegionName (props) {
     console.log(props)
     const [region, setRegion] = useState({
         region: []
     })
     useEffect(() => {
-        getRegion(props.match.params.id)
+        getRegionByName(props.match.params.name)
         .then((res) => {
             setRegion(res)
         })
@@ -17,13 +18,24 @@ export default function ByRegion (props) {
         })
     }, [])
 
-    console.log(props)
+    
+
+    
+
+  
+
+    
 
     return (
         <div className='globalbackground'>
             <Nav />
+            
             <div className='coursedisplay'>
-                <p>{region.name}</p>
+                
+                <h2>{region.name}</h2>
+            </div>
+            <div>
+                
             </div>
         </div>
     )

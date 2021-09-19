@@ -12,17 +12,18 @@ test('getCourse returns the correct course', () => {
     })
 })
 
-// test('getCoursesByRegion returns the correct courses', () => {
-//     return courses.getCoursesByRegion('Auckland', testDb)
-//     .then(courses => {
-//         expect(courses).toHaveLength(13)
+test('getCoursesByRegion returns the correct courses', () => {
+    return courses.getCoursesByRegion('Auckland', testDb)
+    .then(courses => {
+        expect(courses).toHaveLength(13)
         
-//     })
-// })
+        
+    })
+})
 
 
-test('getCourseByRegionID returns the correct courses', () => {
-    return courses.getCoursesByRegionID(4, testDb)
+test('getCourseByRegionNumber returns the correct courses', () => {
+    return courses.getCoursesByRegionNumber(4, testDb)
     .then(courses => {
         expect(courses).toHaveLength(13)
     })

@@ -9,8 +9,11 @@ exports.up = (knex) => {
                 table.string('country')
                 table.string('region')
                 table.string('handicap')
+                table.string('password')
                 table.binary('hash')
                 table.boolean('isAdmin')
+                table.boolean('confirmed')
+                table.integer('totalCoursesPlayed')
                 
             })
 
