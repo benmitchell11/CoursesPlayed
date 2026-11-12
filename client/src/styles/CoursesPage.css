@@ -1,0 +1,27 @@
+.courses-page {
+  min-height: calc(100vh - 4.5rem);
+  padding: 1.5rem 0;
+  background-color: #eaf0e7;
+}
+
+.courses-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.courses-sidebar {
+  display: grid;
+  gap: 1rem;
+}
+
+.courses-map-column {
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .courses-layout {
+    grid-template-columns: 1fr;
+  }
+}

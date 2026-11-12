@@ -65,3 +65,17 @@ bundle.*
 
 # Development databases
 dev.sqlite3
+*.sqlite3
+
+# Vite / build output
+client/dist
+server/public/*
+!server/public/.gitkeep
+
+# Claude code-review scratch pages
+.claude-review/
+server/evals/results/
+# real scorecard photos and their answers stay local
+server/evals/scorecards/*
+!server/evals/scorecards/.gitkeep
+server/db/par-review.json

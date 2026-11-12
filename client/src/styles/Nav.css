@@ -1,0 +1,122 @@
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: stretch;
+  min-height: 4.5rem;
+  padding: 0 1.25rem;
+  background: #ffffff;
+  box-shadow:
+    0 0.2rem 0.4rem rgba(13, 40, 24, 0.14),
+    0 0.9rem 2rem rgba(13, 40, 24, 0.24);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.site-nav .navbar-brand {
+  flex-shrink: 0;
+}
+
+.site-nav .navbar-logo-link {
+  padding: 0.55rem 0.75rem;
+}
+
+.site-nav img.nav-logo {
+  max-height: 3.25rem;
+  width: auto;
+}
+
+.site-nav-links {
+  display: flex;
+  align-items: stretch;
+  margin-left: auto;
+}
+
+.site-nav .navbar-item,
+.site-nav .navbar-link {
+  background: transparent;
+}
+
+.site-nav .navbar-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #153421;
+  font-weight: 600;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.site-nav .navbar-item:hover,
+.site-nav .navbar-item:focus,
+.site-nav .navbar-item:active {
+  color: #4f8031;
+  background: transparent;
+  outline: none;
+}
+
+.site-nav .nav-hover-club {
+  position: absolute;
+  bottom: -0.55rem;
+  left: 50%;
+  width: 3rem;
+  height: 3rem;
+  max-height: none;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%) rotate(90deg) scale(0.68);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.site-nav .navbar-item:hover .nav-hover-club,
+.site-nav .navbar-item:focus-visible .nav-hover-club {
+  opacity: 1;
+  transform: translateX(-50%) rotate(90deg) scale(0.86);
+}
+
+.site-nav .nav-account-button {
+  border: 0;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.site-nav .navbar-item:focus-visible {
+  outline: 2px solid #659d41;
+  outline-offset: -4px;
+}
+
+@media (max-width: 1023px) {
+  .site-nav {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-nav {
+    min-height: 4rem;
+    padding: 0 0.25rem;
+  }
+
+  .site-nav .navbar-logo-link {
+    padding: 0.55rem 0.35rem;
+  }
+
+  .site-nav img.nav-logo {
+    max-width: 120px;
+    max-height: 2.5rem;
+  }
+
+  .site-nav .navbar-item {
+    padding-right: 0.4rem;
+    padding-left: 0.4rem;
+    font-size: 0.85rem;
+  }
+
+  .site-nav .nav-hover-club {
+    bottom: -0.35rem;
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}

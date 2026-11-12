@@ -1,0 +1,116 @@
+.nz-map-container {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.nz-map {
+  width: 100%;
+  aspect-ratio: 1000 / 1330;
+  display: block;
+  background: #ffffff;
+  border: 2px solid #d5ddd2;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.nz-map-island {
+  fill: #659D41;
+}
+
+.nz-map-borders {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+}
+
+.nz-map-region {
+  cursor: pointer;
+  transition: fill 0.15s ease;
+}
+
+.nz-map-region:hover {
+  fill: #367334;
+}
+
+.nz-map-region.is-selected {
+  fill: #367334;
+}
+
+.nz-map-region-badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  background: #e6f2ea;
+  border: 1px solid #1f5c3a;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.nz-map-region-clear {
+  background: none;
+  border: none;
+  color: #1f5c3a;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.8rem;
+  padding: 0;
+}
+
+.nz-map-pin circle {
+  fill: #d64545;
+  stroke: #ffffff;
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+  transition: fill 0.15s ease;
+}
+
+.nz-map-pin {
+  cursor: pointer;
+  outline: none;
+}
+
+.nz-map-pin:focus,
+.nz-map-pin:focus-visible {
+  outline: none;
+}
+
+.nz-map-pin:hover circle,
+.nz-map-pin.is-selected circle {
+  fill: #9f1239;
+}
+
+.nz-map-pin.is-played circle {
+  fill: #2f9e44;
+}
+
+.nz-map-pin.is-played:hover circle,
+.nz-map-pin.is-played.is-selected circle {
+  fill: #1b6b2e;
+}
+
+.nz-map-pending-pin {
+  fill: #2563eb;
+  stroke: #ffffff;
+  stroke-width: 3.5;
+  vector-effect: non-scaling-stroke;
+}
+
+.nz-map-popup {
+  position: absolute;
+  transform: translate(-50%, -120%);
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-size: 0.875rem;
+  white-space: nowrap;
+  z-index: 10;
+}

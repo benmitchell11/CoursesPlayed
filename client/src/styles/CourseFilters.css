@@ -1,0 +1,76 @@
+.course-filters {
+  padding: 1.25rem;
+  background: #ffffff;
+  border: 2px solid #d5ddd2;
+  border-radius: 8px;
+  box-shadow: 0 0.35rem 1rem rgba(31, 60, 39, 0.08);
+}
+
+.course-filters h2 {
+  margin-bottom: 1rem;
+  color: #153421;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.course-filter-label,
+.course-filter-group legend {
+  margin-bottom: 0.45rem;
+  color: #294c35;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.course-filter-group {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 1.25rem;
+  padding: 0;
+  border: 0;
+}
+
+.course-filter-group label,
+.course-region-options label {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: #24422e;
+  cursor: pointer;
+}
+
+.course-filter-group input,
+.course-region-options input {
+  accent-color: #4f8031;
+}
+
+.course-region-filter {
+  margin-top: 1.25rem;
+  border-top: 1px solid #d5ddd2;
+}
+
+.course-region-filter summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  color: #294c35;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.course-region-filter summary span {
+  min-width: 1.5rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 999px;
+  background: #eaf0e7;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.course-region-options {
+  display: grid;
+  gap: 0.5rem;
+  max-height: 18rem;
+  margin-top: 0.8rem;
+  overflow-y: auto;
+}

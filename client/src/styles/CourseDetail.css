@@ -1,0 +1,379 @@
+.course-detail-page {
+  min-height: calc(100vh - 4.5rem);
+  padding: 2rem 0 4rem;
+  background:
+    radial-gradient(ellipse 80% 50% at 10% 0%, rgba(101, 157, 65, 0.14), transparent 55%),
+    linear-gradient(180deg, #eaf0e7 0%, #f4f6f1 45%, #eaf0e7 100%);
+  color: #153421;
+}
+
+.course-detail-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 1.5rem;
+  color: #4f8031;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.course-detail-back:hover,
+.course-detail-back:focus-visible {
+  color: #367334;
+  text-decoration: underline;
+}
+
+.course-detail-hero {
+  margin-bottom: 2rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid rgba(31, 60, 39, 0.12);
+}
+
+.course-detail-eyebrow {
+  margin: 0 0 0.45rem;
+  color: #4f8031;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.course-detail-hero h1 {
+  margin: 0 0 0.55rem;
+  color: #153421;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.course-detail-location {
+  margin: 0;
+  color: #5f7164;
+  font-size: 1.05rem;
+}
+
+.course-detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  margin-top: 1rem;
+}
+
+.course-detail-meta-item {
+  color: #45604d;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.course-detail-info {
+  margin-bottom: 1.5rem;
+}
+
+.course-info-list {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr);
+  gap: 0.55rem 1rem;
+  margin: 0;
+}
+
+.course-info-list dt {
+  color: #5f7164;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.course-info-list dd {
+  margin: 0;
+  color: #153421;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.course-info-list a {
+  color: #4f8031;
+  font-weight: 700;
+}
+
+.course-info-list a:hover {
+  color: #367334;
+}
+
+.course-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 22rem) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.course-detail-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.course-detail-panel {
+  padding: 1.35rem 1.4rem 1.5rem;
+  background: #ffffff;
+  border: 1px solid #d5ddd2;
+  border-radius: 10px;
+  box-shadow: 0 0.35rem 1rem rgba(31, 60, 39, 0.07);
+}
+
+.course-detail-panel h2 {
+  margin: 0 0 1rem;
+  color: #153421;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.course-detail-signin {
+  margin: 0;
+  color: #45604d;
+  line-height: 1.5;
+}
+
+.course-detail-signin a {
+  color: #4f8031;
+  font-weight: 700;
+}
+
+.course-detail-signin a:hover {
+  color: #367334;
+}
+
+/* Mark played form */
+.mark-played-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mark-played-hint {
+  margin: -0.35rem 0 0.25rem;
+  color: #5f7164;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.mark-played-toggle {
+  width: 100%;
+  border: 2px solid #4f8031;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #4f8031;
+  font-weight: 800;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.mark-played-toggle:hover:not(:disabled),
+.mark-played-toggle:focus-visible:not(:disabled) {
+  background: #eaf0e7;
+}
+
+.mark-played-toggle.is-played {
+  border-color: #2f9e44;
+  background: #2f9e44;
+  color: #ffffff;
+}
+
+.mark-played-toggle.is-played:hover:not(:disabled),
+.mark-played-toggle.is-played:focus-visible:not(:disabled) {
+  background: #1b6b2e;
+  border-color: #1b6b2e;
+}
+
+.mark-played-toggle:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.mark-played-form .field {
+  margin: 0;
+}
+
+.mark-played-form .label {
+  margin-bottom: 0.35rem;
+  color: #294c35;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.mark-played-form .input,
+.mark-played-form .textarea,
+.mark-played-form .select select {
+  border-color: #d5ddd2;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.mark-played-form .input:focus,
+.mark-played-form .textarea:focus,
+.mark-played-form .select select:focus {
+  border-color: #659d41;
+  box-shadow: 0 0 0 2px rgba(101, 157, 65, 0.2);
+}
+
+.mark-played-form .select {
+  width: 100%;
+}
+
+.mark-played-form .select select {
+  width: 100%;
+}
+
+.mark-played-form .textarea {
+  min-height: 6rem;
+  resize: vertical;
+}
+
+.mark-played-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.mark-played-submit {
+  border: 0;
+  border-radius: 999px;
+  background: #4f8031;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.65rem 1.35rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.mark-played-submit:hover,
+.mark-played-submit:focus-visible {
+  background: #367334;
+}
+
+.mark-played-message {
+  margin: 0;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.mark-played-message.is-error {
+  color: #b91c1c;
+}
+
+.mark-played-message.is-success {
+  color: #4f8031;
+}
+
+.mark-played-toggle + .mark-played-message {
+  margin-top: 0.75rem;
+}
+
+/* Played summary */
+.played-summary-count {
+  margin: 0 0 1rem;
+  color: #45604d;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.played-summary-number {
+  color: #153421;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.played-friends-heading {
+  margin: 0 0 0.75rem;
+  color: #294c35;
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.played-by-empty {
+  margin: 0;
+  color: #5f7164;
+  line-height: 1.5;
+}
+
+.played-by-empty a {
+  color: #4f8031;
+  font-weight: 700;
+}
+
+.played-by-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.played-by-entry {
+  padding: 0.95rem 1rem;
+  background: #f7faf5;
+  border: 1px solid #e2e8de;
+  border-radius: 8px;
+}
+
+.played-by-entry-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 1rem;
+}
+
+.friends-list-item a {
+  color: #4f8031;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.friends-list-item a:hover {
+  text-decoration: underline;
+}
+
+.played-by-user {
+  color: #153421;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.played-by-user:hover {
+  color: #4f8031;
+  text-decoration: underline;
+}
+
+.played-by-date {
+  color: #5f7164;
+  font-size: 0.88rem;
+}
+
+.played-by-rating {
+  display: inline-block;
+  margin-top: 0.45rem;
+  color: #4f8031;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.played-by-notes {
+  margin: 0.55rem 0 0;
+  color: #45604d;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 860px) {
+  .course-detail-layout {
+    grid-template-columns: 1fr;
+  }
+}
