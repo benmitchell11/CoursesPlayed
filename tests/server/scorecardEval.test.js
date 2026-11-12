@@ -98,17 +98,38 @@ describe.skipIf(!fixtures.length)('real scorecard fixtures, read by a perfect mo
       holes: expected.pars.map((par, i) => ({
         hole: i + 1, par, distance: expected.distances?.[i] ?? null, stroke_index: expected.stroke_indexes?.[i] ?? null
       })),
-      players: []
+      // Filled cards carry the player's real scores and any totals written on the card.
+      players: expected.strokes
+        ? [{
+            name: 'Player',
+            scores: expected.strokes.map((strokes, i) => ({ hole: i + 1, strokes, legible: true })),
+            printed_out: expected.written_totals?.out ?? null,
+            printed_in: expected.written_totals?.in ?? null,
+            printed_total: expected.written_totals?.total ?? null
+          }]
+        : []
     }
+    // "Today" must not be before the round, or the date is rightly rejected as in the future.
+    const today = expected.date_played && expected.date_played > '2026-09-25' ? expected.date_played : '2026-09-25'
     const client = { messages: { parse: async () => ({ parsed_output: gold, usage: { input_tokens: 1, output_tokens: 1 } }) } }
     const jpeg = Buffer.concat([Buffer.from([0xff, 0xd8, 0xff, 0xe0]), Buffer.alloc(32)]).toString('base64')
 
-    const result = await parseScorecard({ image: jpeg, mediaType: 'image/jpeg', courses: catalogue, client, today: '2026-09-25', allowNoPlayers: true })
+    const result = await parseScorecard({ image: jpeg, mediaType: 'image/jpeg', courses: catalogue, client, today, allowNoPlayers: true })
     const scored = scoreScorecard(result, expected)
+    const holeCount = expected.pars.length
 
     expect(scored.checks.filter((c) => !c.pass)).toEqual([])
-    expect(scored.pars).toEqual({ total: 18, correct: 18 })
-    expect(result.warnings).toEqual([])
+    expect(scored.pars).toEqual({ total: holeCount, correct: holeCount })
+    if (expected.strokes) expect(scored.cells).toMatchObject({ total: holeCount, correct: holeCount, silentErrors: 0 })
+
+    // Totals deliberately written wrong on the card must raise a warning; otherwise there are none.
+    const w = expected.written_totals
+    const added = expected.strokes && expected.strokes.reduce((a, b) => a + b, 0)
+    if (w && w.total != null && w.total !== added) {
+      expect(result.warnings.join(' ')).toMatch(/Total/)
+    } else {
+      expect(result.warnings).toEqual([])
+    }
   })
 })
 
