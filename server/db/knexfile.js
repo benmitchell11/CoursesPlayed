@@ -6,7 +6,13 @@ module.exports = {
     connection: {
       filename: path.join(__dirname, 'dev.sqlite3')
     },
-    useNullAsDefault: true
+    useNullAsDefault: true,
+    migrations: {
+      directory: path.join(__dirname, 'migrations')
+    },
+    seeds: {
+      directory: path.join(__dirname, 'seeds')
+    }
   },
 
   test: {
@@ -14,7 +20,10 @@ module.exports = {
     connection: {
       filename: ':memory:'
     },
-    useNullAsDefault: true
+    useNullAsDefault: true,
+    migrations: {
+      directory: path.join(__dirname, 'migrations')
+    }
   },
 
   production: {
@@ -25,7 +34,11 @@ module.exports = {
       max: 10
     },
     migrations: {
-      tableName: 'knex_migrations'
+      tableName: 'knex_migrations',
+      directory: path.join(__dirname, 'migrations')
+    },
+    seeds: {
+      directory: path.join(__dirname, 'seeds')
     }
   }
 }

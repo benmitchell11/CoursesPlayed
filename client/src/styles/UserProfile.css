@@ -1,0 +1,289 @@
+.user-profile-page {
+  min-height: calc(100vh - 4.5rem);
+  padding: 2rem 0 4rem;
+  background:
+    radial-gradient(ellipse 80% 50% at 10% 0%, rgba(101, 157, 65, 0.14), transparent 55%),
+    linear-gradient(180deg, #eaf0e7 0%, #f4f6f1 45%, #eaf0e7 100%);
+  color: #153421;
+}
+
+.user-profile-page h1 {
+  margin-bottom: 1.5rem;
+  color: #153421;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.user-profile-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-bottom: 1.75rem;
+}
+
+.user-profile-stat {
+  padding: 1rem;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #d5ddd2;
+  border-radius: 10px;
+}
+
+.user-profile-stat-label {
+  margin: 0 0 0.35rem;
+  color: #5f7164;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.user-profile-stat-value {
+  margin: 0;
+  color: #153421;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.user-profile-panel {
+  margin-bottom: 1.5rem;
+  padding: 1.35rem 1.4rem 1.5rem;
+  background: #ffffff;
+  border: 1px solid #d5ddd2;
+  border-radius: 10px;
+  box-shadow: 0 0.35rem 1rem rgba(31, 60, 39, 0.07);
+}
+
+.user-profile-panel h2 {
+  margin: 0 0 1rem;
+  color: #153421;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.handicap-hint {
+  margin: -0.35rem 0 1rem;
+  color: #5f7164;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.handicap-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 0.75rem;
+}
+
+.handicap-form input {
+  flex: 1 1 8rem;
+  max-width: 12rem;
+  min-width: 0;
+  border: 1px solid #d5ddd2;
+  border-radius: 6px;
+  padding: 0.55rem 0.75rem;
+}
+
+.handicap-form input:focus {
+  outline: none;
+  border-color: #659d41;
+  box-shadow: 0 0 0 2px rgba(101, 157, 65, 0.2);
+}
+
+.handicap-form button {
+  border: 0;
+  border-radius: 999px;
+  background: #4f8031;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.55rem 1.1rem;
+  cursor: pointer;
+}
+
+.handicap-form button:hover:not(:disabled) {
+  background: #367334;
+}
+
+.handicap-form button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.friends-add {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+}
+
+.friends-add input {
+  flex: 1 1 12rem;
+  min-width: 0;
+  border: 1px solid #d5ddd2;
+  border-radius: 6px;
+  padding: 0.55rem 0.75rem;
+}
+
+.friends-add input:focus {
+  outline: none;
+  border-color: #659d41;
+  box-shadow: 0 0 0 2px rgba(101, 157, 65, 0.2);
+}
+
+.friends-add button,
+.friends-accept {
+  border: 0;
+  border-radius: 999px;
+  background: #4f8031;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.55rem 1.1rem;
+  cursor: pointer;
+}
+
+.friends-add button:hover,
+.friends-accept:hover {
+  background: #367334;
+}
+
+.friends-message {
+  margin: 0 0 0.85rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.friends-message.is-error {
+  color: #b91c1c;
+}
+
+.friends-message.is-success {
+  color: #4f8031;
+}
+
+.friends-subsection {
+  margin-top: 1rem;
+}
+
+.friends-subsection h3 {
+  margin: 0 0 0.55rem;
+  color: #294c35;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.friends-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.friends-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.7rem 0.85rem;
+  background: #f7faf5;
+  border: 1px solid #e2e8de;
+  border-radius: 8px;
+}
+
+.friends-list-item a {
+  color: #4f8031;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.friends-list-item a:hover {
+  text-decoration: underline;
+}
+
+.friends-empty,
+.play-log-empty {
+  margin: 0;
+  color: #5f7164;
+}
+
+.played-courses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.played-courses-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 1rem;
+  padding: 0.7rem 0.85rem;
+  background: #f7faf5;
+  border: 1px solid #e2e8de;
+  border-radius: 8px;
+}
+
+.played-courses-list a {
+  color: #4f8031;
+  font-weight: 700;
+}
+
+.played-courses-list span {
+  color: #5f7164;
+  font-size: 0.88rem;
+}
+
+.play-log-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.play-log-table th,
+.play-log-table td {
+  padding: 0.65rem 0.4rem;
+  border-bottom: 1px solid #e2e8de;
+  text-align: left;
+  font-size: 0.92rem;
+}
+
+.play-log-table th {
+  color: #5f7164;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.play-log-table a {
+  color: #4f8031;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .user-profile-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .play-log-table {
+    display: block;
+    overflow-x: auto;
+  }
+}

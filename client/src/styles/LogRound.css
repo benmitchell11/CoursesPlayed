@@ -1,0 +1,202 @@
+.log-round-page {
+  min-height: calc(100vh - 4.5rem);
+  padding: 2rem 0 4rem;
+  background:
+    radial-gradient(ellipse 80% 50% at 10% 0%, rgba(101, 157, 65, 0.14), transparent 55%),
+    linear-gradient(180deg, #eaf0e7 0%, #f4f6f1 45%, #eaf0e7 100%);
+  color: #153421;
+}
+
+.log-round-page h1 {
+  margin-bottom: 0.5rem;
+  color: #153421;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.log-round-page h2 {
+  margin-bottom: 0.75rem;
+  color: #153421;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.log-round-intro {
+  margin-bottom: 1.25rem;
+  color: #3d5a45;
+}
+
+.log-round-box {
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  background: #ffffff;
+  border: 1px solid #d5ddd2;
+  border-radius: 10px;
+}
+
+.log-round-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.log-round-actions button,
+.log-round-search button {
+  padding: 0.55rem 1.1rem;
+  color: #ffffff;
+  font-weight: 700;
+  background: #2f6b3a;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.log-round-actions button:disabled {
+  background: #9ab3a0;
+  cursor: not-allowed;
+}
+
+.log-round-actions .log-round-secondary {
+  color: #2f6b3a;
+  background: transparent;
+  border: 1px solid #2f6b3a;
+}
+
+.log-round-count {
+  margin-left: auto;
+  color: #6b8471;
+  font-size: 0.85rem;
+}
+
+.log-round-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 0.75rem;
+}
+
+.log-round-search {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.log-round-warnings {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem 0.75rem 1.75rem;
+  color: #6a4b00;
+  background: #fff6dd;
+  border: 1px solid #ecd58a;
+  border-radius: 8px;
+  list-style: disc;
+}
+
+.demo-banner {
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.75rem;
+  color: #1d3f6e;
+  background: #e8f0fb;
+  border: 1px solid #b7cdee;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.log-round-details {
+  margin-bottom: 1rem;
+}
+
+.log-round-details summary {
+  margin-bottom: 0.5rem;
+  color: #2f6b3a;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.log-round-footer {
+  color: #6b8471;
+  font-size: 0.9rem;
+}
+
+.scorecard-upload {
+  display: block;
+  margin: 0.75rem 0;
+}
+
+.scorecard-review h3 {
+  margin: 1rem 0 0.75rem;
+  color: #153421;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.scorecard-preview {
+  display: block;
+  max-width: 100%;
+  max-height: 260px;
+  margin: 0 0 1rem;
+  border: 1px solid #d5ddd2;
+  border-radius: 8px;
+}
+
+.scorecard-players {
+  margin-bottom: 1rem;
+}
+
+.scorecard-players .radio {
+  display: block;
+  margin: 0.25rem 0;
+}
+
+.scorecard-table-wrap {
+  margin-bottom: 0.75rem;
+  overflow-x: auto;
+}
+
+.scorecard-table {
+  width: 100%;
+  min-width: 34rem;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.scorecard-table th,
+.scorecard-table td {
+  padding: 0.3rem 0.35rem;
+  text-align: center;
+  border: 1px solid #d5ddd2;
+}
+
+.scorecard-table thead th,
+.scorecard-table tbody th {
+  color: #153421;
+  background: #eaf0e7;
+  font-weight: 700;
+}
+
+.scorecard-table td input {
+  width: 100%;
+  min-width: 2.2rem;
+  padding: 0.25rem;
+  text-align: center;
+  border: 1px solid #b9c7b6;
+  border-radius: 4px;
+}
+
+.scorecard-table td.is-doubtful {
+  background: #fff6dd;
+}
+
+.scorecard-table td.is-doubtful input {
+  border-color: #d9a400;
+}
+
+.scorecard-sum {
+  font-weight: 700;
+  background: #eaf0e7;
+}
+
+.scorecard-total {
+  margin: 0.25rem 0 0.75rem;
+  font-size: 1.05rem;
+}
